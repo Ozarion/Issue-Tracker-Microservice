@@ -8,7 +8,6 @@
 
 'use strict';
 
-var expect = require('chai').expect;
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 
@@ -20,26 +19,23 @@ module.exports = function (app) {
     if (err) {
       console.log("Cannot connected to Database");
       console.log(err);
-    } else {
+    } 
+    else {
       console.log("Connected to Database Successfully");
 
       app.route('/api/issues/:project')
-
       .get(function (req, res){
         var project = req.params.project;
 
       })
-
       .post(function (req, res){
         var project = req.params.project;
 
       })
-
       .put(function (req, res){
         var project = req.params.project;
 
       })
-
       .delete(function (req, res){
         var project = req.params.project;
 
